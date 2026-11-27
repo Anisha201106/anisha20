@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Registration</h1>
+
+    <!-- Login Section -->
+    <div id="login">
+
+        <h2>Login</h2>
+
+        <input type="text" id="username" placeholder="Username">
+
+        <input type="password" id="password" placeholder="Password">
+
+        <button type="button" onclick="login()">Login</button>
+
+        <p id="loginMsg"></p>
+
+    </div>
+
+    <!-- Registration Section -->
+    <form id="registration" style="display:none;">
+
+        <h2>Registration Form</h2>
+
+        <label>Student Name</label>
+        <input type="text" id="name" required>
+
+        <label>Email</label>
+        <input type="email" id="email" required>
+
+        <label>Age</label>
+        <input type="number" id="age" min="1" max="29" required>
+
+        <label>Phone Number</label>
+        <input type="tel" id="phone" pattern="[0-9]{10}"
+        maxlength="10" required>
+
+        <label>Date of Birth</label>
+        <input type="date" id="dob" required>
+
+        <label>Gender</label>
+        <select id="gender" required>
+            <option value="">Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+
+        <label>Department</label>
+        <select id="dept" required>
+            <option value="">Select Department</option>
+            <option>ECE</option>
+            <option>CSE</option>
+            <option>IT</option>
+            <option>EEE</option>
+            <option>MECH</option>
+        </select>
+
+        <label>Event</label>
+        <select id="event" required>
+            <option value="">Select Event</option>
+            <option>Technical</option>
+            <option>Non Technical</option>
+            <option>Workshop</option>
+            <option>Hackathon</option>
+        </select>
+
+        <label>Address</label>
+        <textarea id="address" required></textarea>
+
+        <button type="submit">Submit</button>
+
+        <p id="success"></p>
+
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
